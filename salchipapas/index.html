@@ -1,211 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salchipapas Únicas</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            background: radial-gradient(circle at 70% 20%, #f6416c 0%, #fff6b7 100%);
-        }
-        .header {
-            text-align: center;
-            padding: 40px 0 20px 0;
-        }
-        .header img {
-            width: 120px;
-            border-radius: 50%;
-            box-shadow: 0 4px 24px #f6416c80;
-            border: 4px solid #fff;
-            margin-bottom: 10px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            color: #f6416c;
-            margin: 0;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 0 #fff, 2px 2px 8px #f6416c40;
-        }
-        .slogan {
-            color: #ffde7d;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-shadow: 1px 1px 0 #fff;
-        }
-        .recomendado {
-            background: linear-gradient(90deg, #fff6b7 60%, #f6416c 100%);
-            border-radius: 24px;
-            box-shadow: 0 4px 24px #f6416c40;
-            padding: 24px 30px;
-            max-width: 500px;
-            margin: 30px auto 40px auto;
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            position: relative;
-        }
-        .recomendado img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 3px solid #fff;
-            box-shadow: 0 2px 12px #f6416c40;
-        }
-        .recomendado .info {
-            flex: 1;
-        }
-        .recomendado .estrella {
-            position: absolute;
-            top: 16px;
-            right: 24px;
-            font-size: 2em;
-            color: #f6416c;
-            filter: drop-shadow(0 0 6px #fff6b7);
-        }
-        .productos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 38px;
-            max-width: 1100px;
-            margin: 0 auto 60px auto;
-        }
-        .producto {
-            background: rgba(255,255,255,0.7);
-            border-radius: 28px;
-            box-shadow: 0 8px 32px #f6416c30;
-            padding: 28px 20px 20px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            backdrop-filter: blur(4px);
-            border: 2px solid #fff6b7;
-        }
-        .producto img {
-            width: 110px;
-            height: 110px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 16px;
-            border: 3px solid #f6416c;
-            box-shadow: 0 2px 12px #f6416c40;
-        }
-        .nombre {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #f6416c;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-        .descripcion {
-            font-size: 1em;
-            color: #333;
-            text-align: center;
-            margin-bottom: 12px;
-        }
-        .iconos {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        .icono {
-            font-size: 1.5em;
-            filter: drop-shadow(0 0 2px #fff6b7);
-        }
-        .btn-pedir {
-            background: linear-gradient(90deg, #f6416c 60%, #ffde7d 100%);
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 26px;
-            font-size: 1em;
-            font-weight: bold;
-            margin-top: 10px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px #f6416c40;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .btn-pedir:hover {
-            background: linear-gradient(90deg, #ffde7d 60%, #f6416c 100%);
-            transform: scale(1.08);
-        }
-    </style>
 </head>
+
 <body>
+    <div class="paso">
+        <nav>
+            <a href="../index.html">home</a>
+            <a href="../hamburguesas.html">Hamburgesas</a>
+            <a href="../salchipapas/index.html">Salchipapas</a>
+            <a href="../perros/perros.html">Perros</a>
+            <a href="../bebidas/index.html">Bebidas</a>
+        </nav>
+    </div>
+
     <div class="header">
-        <img src="./logo-salchipapas.png" alt="Logo Salchipapas">
+        <img src="./logo.png" alt="Logo Salchipapas">
         <h1>Salchipapas Únicas</h1>
         <div class="slogan">¡Sabores que no has probado!</div>
     </div>
-    <div class="recomendado">
-        <img src="https://images.unsplash.com/photo-1464306076886-debede6bbf94?auto=format&fit=crop&w=400&q=80" alt="Salchipapa Especial">
-        <div class="info">
-            <div class="nombre">Salchipapa Gourmet</div>
-            <div class="descripcion">Papas crujientes, salchicha premium, salsa de la casa, queso fundido y topping de cebollas caramelizadas.</div>
-            <div class="iconos">
-                <span class="icono">🧀</span>
-                <span class="icono">🌭</span>
-                <span class="icono">🍟</span>
-                <span class="icono">🥓</span>
-            </div>
-            <button class="btn-pedir">¡Pedir recomendada!</button>
-        </div>
-        <span class="estrella">⭐</span>
+    <div class="fondo">
+        <img src="./backgroud_main.png" alt="">
     </div>
     <div class="productos">
         <div class="producto">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Salchipapa Tradicional">
+            <img src="./tradicional.png" alt="Salchipapa Tradicional">
             <div class="nombre">Salchipapa Tradicional</div>
             <div class="descripcion">Papas fritas, salchicha, kétchup y mayonesa.</div>
-            <div class="iconos">
-                <span class="icono">🍟</span>
-                <span class="icono">🌭</span>
-            </div>
+            <div class="precio">$14.000</div>
             <button class="btn-pedir">¡Pedir ahora!</button>
         </div>
         <div class="producto">
-            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Salchipapa con Queso">
+            <img src="./con queso.png" alt="Salchipapa con Queso">
             <div class="nombre">Salchipapa con Queso</div>
             <div class="descripcion">Papas fritas, salchicha, queso fundido y salsas.</div>
-            <div class="iconos">
-                <span class="icono">🧀</span>
-                <span class="icono">🍟</span>
-            </div>
+            <div class="precio">$14.000</div>
             <button class="btn-pedir">¡Pedir ahora!</button>
         </div>
         <div class="producto">
-            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Salchipapa Mexicana">
+            <img src="./mexicana.png" alt="Salchipapa Mexicana">
             <div class="nombre">Salchipapa Mexicana</div>
             <div class="descripcion">Papas, salchicha, jalapeños, queso y salsa picante.</div>
-            <div class="iconos">
-                <span class="icono">🌶️</span>
-                <span class="icono">🍟</span>
-            </div>
+            <div class="precio">$14.000</div>
             <button class="btn-pedir">¡Pedir ahora!</button>
         </div>
         <div class="producto">
-            <img src="https://images.unsplash.com/photo-1464306076886-debede6bbf94?auto=format&fit=crop&w=400&q=80" alt="Salchipapa Especial">
+            <img src="./especial.png" alt="Salchipapa Especial">
             <div class="nombre">Salchipapa Especial</div>
             <div class="descripcion">Papas, salchicha, pollo, carne, queso y salsas.</div>
-            <div class="iconos">
-                <span class="icono">🍗</span>
-                <span class="icono">🍟</span>
-                <span class="icono">🧀</span>
-            </div>
+            <div class="precio">$14.000</div>
             <button class="btn-pedir">¡Pedir ahora!</button>
         </div>
         <div class="producto">
-            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Salchipapa Hawaiana">
-            <div class="nombre">Salchipapa Hawaiana</div>
-            <div class="descripcion">Papas, salchicha, piña, queso y salsa especial.</div>
-            <div class="iconos">
-                <span class="icono">🍍</span>
-                <span class="icono">🍟</span>
-            </div>
+            <img src="./gurmet.png" alt="Salchipapa Gourmet">
+            <div class="nombre">Salchipapa Gourmet</div>
+            <div class="descripcion">Papas crujientes, salchicha premium, salsa de la casa, queso fundido y topping de
+                cebollas caramelizadas.</div>
+            <div class="precio">$14.000</div>
             <button class="btn-pedir">¡Pedir ahora!</button>
         </div>
         <div class="producto">
-            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc
+            <img src="./bbq.png" alt="Salchipapa BBQ">
+            <div class="nombre">Salchipapa BBQ</div>
+            <div class="descripcion">Papas, salchicha, salsa BBQ, queso y cebolla crispy.</div>
+            <div class="precio">$14.000</div>
+            <button class="btn-pedir">¡Pedir ahora!</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', Arial, sans-serif;
+        background: #000000;
+    }
+
+    .paso {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            place-content: center;
+            
+
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 30px;
+                background-color: #634700;
+                padding: 10px;
+                border-radius: 10px;
+
+            }
+        }
+    }
+
+    .fondo {
+        padding-top: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .fondo img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+    }
+
+    .header {
+        text-align: center;
+        padding: 40px 0 20px 0;
+    }
+
+    .header img {
+        width: 120px;
+        border-radius: 50%;
+        box-shadow: 0 4px 24px #f6416c80;
+        border: 4px solid #fff;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+        color: #f6416c;
+        margin: 0;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 0 #fff, 2px 2px 8px #f6416c40;
+    }
+
+    .slogan {
+        color: #ffde7d;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-shadow: 1px 1px 0 #fff;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 38px;
+        max-width: 1100px;
+        margin: 0 auto 60px auto;
+    }
+
+    .producto {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 28px;
+        box-shadow: 0 8px 32px #f6416c30;
+        padding: 28px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        backdrop-filter: blur(4px);
+        border: 2px solid #fff6b7;
+    }
+
+    .producto img {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        border: 3px solid #f6416c;
+        box-shadow: 0 2px 12px #f6416c40;
+    }
+
+    .nombre {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #f6416c;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .descripcion {
+        font-size: 1em;
+        color: #333;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .btn-pedir {
+        background: linear-gradient(90deg, #f6416c 60%, #ffde7d 100%);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 26px;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #f6416c40;
+    }
+
+    .btn-pedir:hover {
+        background: linear-gradient(90deg, #ffde7d 60%, #f6416c 100%);
+        transform: scale(1.08);
+    }
+    .precio {
+        font-size: 1.15em;
+        color: #6d313f;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Responsividad */
+    @media (max-width: 900px) {
+        .productos {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+        }
+
+        .producto {
+            width: 90%;
+            max-width: 320px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .productos {
+            grid-template-columns: 1fr;
+            gap: 18px;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 1.3em;
+            margin-bottom: 18px;
+        }
+
+        .header img {
+            max-width: 100px;
+        }
+
+        .producto {
+            width: 98%;
+            max-width: 340px;
+            padding: 18px 8px;
+        }
+    }
+</style>
