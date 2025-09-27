@@ -1,0 +1,124 @@
+<!-- NAVBAR Dorado/Marrón Elegante -->
+<header class="topbar">
+  <nav class="navbar" role="navigation" aria-label="Principal">
+    <a class="brand" href="#home" aria-label="Inicio">🍔 Menú</a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#hamburguesas">Hamburguesas</a></li>
+      <li><a href="#bebidas">Bebidas</a></li>
+      <li><a href="#salchipapas">Salchipapas</a></li>
+      <li><a href="#perros">Perros</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  :root{
+    --gold-1:#d4af37;     /* dorado principal */
+    --gold-2:#b88a1b;     /* dorado oscuro */
+    --brown:#3b2a1a;      /* marrón profundo */
+    --text:#1c140c;
+    --white:#fffdf6;
+  }
+
+  /* Contenedor superior (pegajoso) */
+  .topbar{
+    position: sticky; top:0; z-index: 999;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+  }
+
+  .navbar{
+    max-width: 1100px; margin: 0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding: .6rem 1rem;
+  }
+
+  /* Marca */
+  .brand{
+    font-family: ui-serif, "Times New Roman", Georgia, serif;
+    font-weight: 800;
+    letter-spacing: .5px;
+    font-size: 1.25rem;
+    text-decoration:none;
+    color: var(--brown);
+    text-shadow: 0 1px 0 rgba(255,255,255,.6);
+  }
+
+  /* Links */
+  .nav-links{
+    list-style:none; display:flex; gap: .75rem; margin:0; padding:0;
+    align-items:center;
+  }
+
+  .nav-links a{
+    position:relative;
+    display:block;
+    padding: .55rem .9rem;
+    border-radius: 999px;
+    color: var(--text);
+    font-weight: 600;
+    text-decoration:none;
+    transition: transform .15s ease, background-color .2s ease, color .2s ease;
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(2px);
+  }
+
+  .nav-links a:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,.28);
+  }
+
+  .nav-links a.active{
+    color: var(--white);
+    background: radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.35), rgba(255,255,255,.1)) , 
+                linear-gradient(135deg, var(--brown), #24180f);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.35), 0 4px 10px rgba(0,0,0,.18);
+  }
+
+  /* Botón hamburguesa (responsive) */
+  .nav-toggle{
+    display:none; border:none; background:transparent; cursor:pointer;
+  }
+  .nav-toggle span{
+    display:block; width:26px; height:3px; margin:5px 0;
+    background: var(--brown); border-radius: 2px;
+    transition: transform .25s, opacity .25s;
+  }
+
+  /* Responsive */
+  @media (max-width: 820px){
+    .nav-toggle{ display:block; }
+    .nav-links{
+      position: absolute; left:0; right:0; top: 60px;
+      background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+      border-top: 1px solid rgba(0,0,0,.08);
+      box-shadow: 0 12px 24px rgba(0,0,0,.18);
+      flex-direction: column; gap: .25rem;
+      padding: .6rem;
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease;
+    }
+    .nav-links.show{ max-height: 320px; }
+  }
+</style>
+
+<script>
+  // Toggle del menú en móviles (sin dependencias)
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const list = document.querySelector('.nav-links');
+    btn?.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      list.classList.toggle('show');
+      // Animación del icono
+      btn.classList.toggle('open');
+    });
+  })();
+</script>

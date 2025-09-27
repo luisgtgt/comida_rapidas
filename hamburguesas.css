@@ -25,6 +25,26 @@ header {
     display: grid;
     grid-template-columns: auto auto auto;
     place-items: center;
+    .paso{
+        position:absolute;
+        top:0;
+        
+        nav{
+            display:flex;
+            flex-wrap: wrap;
+            place-content: center;
+
+            a{
+                text-decoration: none;
+                color:#000000;
+                font-size: 30px;
+                background-color: #634700;
+                padding: 10px;
+                border-radius: 10px;
+                
+            }
+        }
+    }
 
     h1 {
         font-family: 'Playfair Display', serif;
@@ -58,6 +78,10 @@ main {
         img {
             width: 300px;
             border-radius: 50px;
+        }
+        h1{
+            background-color: #806605;
+            border-radius: 5px;
         }
 
         p {
