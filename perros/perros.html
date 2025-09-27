@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perros Calientes</title>
 </head>
+
+
 <body>
+    <div class="paso">
+        <nav>
+            <a href="../index.html">home</a>
+            <a href="../hamburguesas.html">Hamburgesas</a>
+            <a href="../salchipapas/index.html">Salchipapas</a>
+            <a href="../perros/perros.html">Perros</a>
+            <a href="../bebidas/index.html">Bebidas</a>
+        </nav>
+    </div>
     <div class="logo">
         <img src="./ChatGPT Image 22 ago 2025, 09_45_45 p.m..png" alt="Logo">
     </div>
-    <div class="fondo"></div>
+    <div class="fondo">
+        <img src="./backgroud_main.png" alt="">
+    </div>
     <h1>Ven y escoge nuestras mejores degustaciones en perros calientes</h1>
     <div class="productos">
         <div class="producto">
@@ -16,6 +31,7 @@
             <div class="nombre">Perro CHILENO</div>
             <img src="./chileno.png" alt="Perro Clásico">
             <div class="descripcion">Salchicha, pan, salsa de tomate y mostaza.</div>
+            <div class="precio">$14.000</div>
             <button class="btn-pedir">¡Quiero este!</button>
         </div>
         <div class="producto">
@@ -23,6 +39,7 @@
             <div class="nombre">Perro CON QUESO</div>
             <img src="papas con queso.png" alt="Perro con Queso">
             <div class="descripcion">Salchicha, pan, queso derretido y papitas.</div>
+            <div class="precio">$18.000</div>
             <button class="btn-pedir">¡Quiero este!</button>
         </div>
         <div class="producto">
@@ -30,6 +47,7 @@
             <div class="nombre">Perro CON TOCINETA Y BBQ</div>
             <img src="tocineta.png" alt="Perro Especial">
             <div class="descripcion">Salchicha, pan, maíz, papitas, salsas y queso.</div>
+            <div class="precio">$25.000</div>
             <button class="btn-pedir">¡Quiero este!</button>
         </div>
         <div class="producto">
@@ -37,6 +55,7 @@
             <div class="nombre">Perro Mexicano</div>
             <img src="mexicano.png" alt="Perro Mexicano">
             <div class="descripcion">Salchicha, pan, guacamole, jalapeños y queso.</div>
+            <div class="precio">$19.000</div>
             <button class="btn-pedir">¡Quiero este!</button>
         </div>
         <div class="producto">
@@ -44,6 +63,7 @@
             <div class="nombre">Perro HAWAIANO</div>
             <img src="hawaino.png" alt="Perro Hawaiano">
             <div class="descripcion">Salchicha, pan, piña, queso y salsa especial.</div>
+            <div class="precio">$22.000</div>
             <button class="btn-pedir">¡Quiero este!</button>
         </div>
         <div class="producto">
@@ -51,119 +71,189 @@
             <div class="nombre">Perro TRADICIONAL</div>
             <img src="clasico.png" alt="Perro Tradicional">
             <div class="descripcion">Salchicha, pan, papitas y salsas clásicas.</div>
+            <div class="precio">$15.000</div>
             <button class="btn-pedir">¡Quiero este!</button>
         </div>
     </div>
 </body>
-</html> 
- <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-        }
-        .logo {
-            text-align: center;
-            padding: 30px 0 10px 0;
-        }
-        .logo img {
-            max-width: 200px;
-            border-radius: 50%;
-            box-shadow: 0 4px 16px #ffb47b80;
-            border: 4px solid #fff;
-        }
-        .fondo {
-            width: 100%;
-            height: 400px;
-            background: url('./loguito.jpeg') center/cover no-repeat;
-            border-radius: 0 0 40px 40px;
-            box-shadow: 0 4px 24px #ffb47b40;
-            margin-bottom: 20px;
-        }
-        h1 {
-            text-align: center; 
-            font-size: 2.2em;
-            color: #d35400;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 0 #fff, 2px 2px 8px #ffb47b80;
-        }
-        .productos {
+
+</html>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        background-color: #000000;
+    }
+
+    .paso {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        nav {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            padding-bottom: 40px;
+            place-content: center;
+            
+
+            a {
+                text-decoration: none;
+                color: #000000;
+                font-size: 30px;
+                background-color: #634700;
+                padding: 10px;
+                border-radius: 10px;
+
+            }
         }
-        .producto {
-            background: linear-gradient(120deg, #fff6e3 60%, #ffe0c1 100%);
-            border-radius: 18px;
-            box-shadow: 0 4px 16px #ffb47b60;
-            padding: 22px 18px;
-            width: 240px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-            overflow: hidden;
+    }
+
+    .fondo {
+        margin-top: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .fondo img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+    }
+
+    .logo {
+        text-align: center;
+
+    }
+
+    .logo img {
+        max-width: 200px;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px #ffb47b80;
+        border: 4px solid #fff;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.2em;
+        color: #d35400;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 0 #fff, 2px 2px 8px #ffb47b80;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-items: center;
+        padding-bottom: 40px;
+    }
+
+    .producto {
+        background: linear-gradient(120deg, #fff6e3 60%, #ffe0c1 100%);
+        border-radius: 18px;
+        box-shadow: 0 4px 16px #ffb47b60;
+        padding: 22px 18px;
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .producto:hover {
+        transform: translateY(-8px) scale(1.04);
+        box-shadow: 0 8px 32px #d3540080;
+    }
+
+    .producto img {
+        width: 140px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 8px #d3540040;
+        border: 2px solid #fff;
+    }
+
+    .nombre {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.25em;
+        color: #e67e22;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .descripcion {
+        font-size: 1em;
+        color: #7f8c8d;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .tag {
+        position: absolute;
+        top: 18px;
+        right: -40px;
+        background: #e67e22;
+        color: #fff;
+        font-size: 0.85em;
+        font-weight: bold;
+        padding: 6px 32px;
+        border-radius: 20px;
+        transform: rotate(20deg);
+        box-shadow: 0 2px 8px #d3540040;
+    }
+
+    /* Botón innovador */
+    .btn-pedir {
+        background: linear-gradient(90deg, #e67e22 60%, #fcb69f 100%);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 28px;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 10px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #d3540040;
+    }
+
+    .btn-pedir:hover {
+        background: linear-gradient(90deg, #d35400 60%, #e67e22 100%);
+        transform: scale(1.07);
+    }
+
+    .precio {
+        font-size: 1.15em;
+        color: #d35400;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    @media (max-width: 978px) {
+        .productos {
+            grid-template-columns: 1fr 1fr;
         }
-        .producto:hover {
-            transform: translateY(-8px) scale(1.04);
-            box-shadow: 0 8px 32px #d3540080;
+    }
+
+    @media (max-width: 600px) {
+        .productos {
+            grid-template-columns: 1fr;
         }
-        .producto img {
-            width: 140px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 8px #d3540040;
-            border: 2px solid #fff;
-        }
-        .nombre {
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 1.25em;
-            color: #e67e22;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-        .descripcion {
-            font-size: 1em;
-            color: #7f8c8d;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .tag {
-            position: absolute;
-            top: 18px;
-            right: -40px;
-            background: #e67e22;
-            color: #fff;
-            font-size: 0.85em;
-            font-weight: bold;
-            padding: 6px 32px;
-            border-radius: 20px;
-            transform: rotate(20deg);
-            box-shadow: 0 2px 8px #d3540040;
-        }
-        /* Botón innovador */
-        .btn-pedir {
-            background: linear-gradient(90deg, #e67e22 60%, #fcb69f 100%);
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 28px;
-            font-size: 1em;
-            font-weight: bold;
-            margin-top: 10px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px #d3540040;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .btn-pedir:hover {
-            background: linear-gradient(90deg, #d35400 60%, #e67e22 100%);
-            transform: scale(1.07);
-        }
-        /* Elimina animaciones y media queries */
-    </style>
+    }
+
+
+
+    /* Elimina animaciones y media queries */
+</style>
